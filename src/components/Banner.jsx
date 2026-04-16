@@ -11,18 +11,30 @@ const Banner = () => {
               Your personal shelf of meaningful connections. Browse, tend, and
               nurture the <br /> relationships that matter most.
             </p>
-            <button className="btn btn-primary">+ App a friend</button>
+            <button className="btn bg-green-900 text-white">+ App a friend</button>
+           
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 pt-6">
+              <div className="bg-white rounded-xl shadow p-6">
+                <h2 className="text-3xl font-bold text-gray-800">10</h2>
+                <p className="text-gray-500 mt-2">Total Friends</p>
+              </div>
+
+              <div className="bg-white rounded-xl shadow p-6">
+                <h2 className="text-3xl font-bold text-gray-800">3</h2>
+                <p className="text-gray-500 mt-2">On Track</p>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6">
+                <h2 className="text-3xl font-bold text-gray-800">6</h2>
+                <p className="text-gray-500 mt-2">Need Attention</p>
+              </div>
+              <div className="bg-white rounded-xl shadow p-6">
+                <h2 className="text-3xl font-bold text-gray-800">12</h2>
+                <p className="text-gray-500 mt-2">Interactions This Month</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div className="card bg-base-100 w-96 shadow-sm">
-        <div className="card-body">
-          <h2 className="card-title">10</h2>
-          <p>
-            Total friends
-          </p>
-        </div>
-        </div>
     </div>
   );
 };
