@@ -1,32 +1,31 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ImStatsDots } from "react-icons/im";
+import { IoMdTime } from "react-icons/io";
+import { RiHome2Line } from "react-icons/ri";
 
 const Navbar = () => {
   return (
     <div>
-      <div className="navbar bg-base-100 shadow-sm">
+      <div className="navbar bg-base-100 shadow-sm ">
         <div className="flex-1">
-          <Image src="/images/logo.png" width={300} height={300} alt="">
-            
-          </Image>
+          <Image src="/images/logo.png" width={200} height={200} alt=""></Image>
         </div>
         <div className="flex-none">
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a>Link</a>
-            </li>
-            <li>
-              <details>
-                <summary>Parent</summary>
-                <ul className="bg-base-100 rounded-t-none p-2">
-                  <li>
-                    <a>Link 1</a>
-                  </li>
-                  <li>
-                    <a>Link 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
+          <ul className="menu menu-horizontal px-1 flex gap-4  text-lg ">
+            <Link className="flex items-center gap-1" href="/">
+              {" "}
+              <RiHome2Line className="w-6"/>
+              <span> Home</span>
+            </Link>
+            <Link className="flex items-center gap-1" href="/timeline">
+              <IoMdTime className="w-6"/>
+              <span>Timeline</span>
+            </Link>
+            <Link className="flex items-center gap-1" href="/stats">
+              <ImStatsDots className="w-6"/>
+              <span>stats</span>
+            </Link>
           </ul>
         </div>
       </div>
