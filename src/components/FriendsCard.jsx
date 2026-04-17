@@ -1,6 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
 export default function FriendsCard({ friend }) {
-  const { name, picture, days_since_contact, status, tags } = friend;
+  const { name, picture, days_since_contact, status, tags, } = friend;
 //   console.log({status});
   const statusColor =
     status === "overdue"
@@ -9,6 +10,8 @@ export default function FriendsCard({ friend }) {
         ? "bg-green-700"
         : "bg-yellow-500";
   return (
+    <Link href={`/friend/${friend.id}`}
+    >
     <div className="bg-white rounded-xl shadow p-6 text-center">
       <div className="flex justify-center">
         <Image
@@ -35,5 +38,6 @@ export default function FriendsCard({ friend }) {
         </span>
       </div>
     </div>
+    </Link>
   );
 }

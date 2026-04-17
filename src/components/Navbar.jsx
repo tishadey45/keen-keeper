@@ -8,9 +8,9 @@ const Navbar = () => {
   return (
     <div>
       <div className="navbar bg-base-100 shadow-sm ">
-        <div className="flex-1">
+        <Link className="flex-1" href="/">
           <Image src="/images/logo.png" width={200} height={200} alt=""></Image>
-        </div>
+        </Link>
         <div className="flex-none">
           <ul className="menu menu-horizontal px-1 flex gap-4  text-lg ">
             <Link className="flex items-center gap-1" href="/">
