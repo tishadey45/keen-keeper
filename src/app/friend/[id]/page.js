@@ -1,12 +1,8 @@
+import ActionButton from "@/components/ActionButtons";
 import { FriendsProfile } from "@/lib/api";
 import Image from "next/image";
-import { FiPhoneCall } from "react-icons/fi";
-import { LuVideo } from "react-icons/lu";
-import { MdTextsms } from "react-icons/md";
-import { RiDeleteBin6Line } from "react-icons/ri";
 import { PiArchiveBold } from "react-icons/pi";
-import { RiNotificationSnoozeLine } from "react-icons/ri";
-import ActionButton from "@/components/ActionButtons";
+import { RiDeleteBin6Line, RiNotificationSnoozeLine } from "react-icons/ri";
 
 export default async function DetailsPage({ params }) {
   // console.log(params);
@@ -66,11 +62,15 @@ export default async function DetailsPage({ params }) {
           <p className="text-sm text-gray-400 mt-2">{email}</p>
         </div>
         <div className="mt-6 space-y-2 ">
-          <button className="flex gap-2 justify-center w-full border py-2 rounded-lg"><RiNotificationSnoozeLine />
+          <button className="flex gap-2 justify-center w-full border py-2 rounded-lg">
+            <RiNotificationSnoozeLine />
             Snooze 2 Weeks
           </button>
-          <button className="flex gap-2 justify-center w-full border py-2 rounded-lg"><PiArchiveBold /> Archive</button>
-          <button className="flex gap-2 justify-center w-full border py-2 rounded-lg text-red-500"><RiDeleteBin6Line />
+          <button className="flex gap-2 justify-center w-full border py-2 rounded-lg">
+            <PiArchiveBold /> Archive
+          </button>
+          <button className="flex gap-2 justify-center w-full border py-2 rounded-lg text-red-500">
+            <RiDeleteBin6Line />
             Delete
           </button>
         </div>
@@ -104,22 +104,7 @@ export default async function DetailsPage({ params }) {
         <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
           <h3 className="mb-4 font-semibold">Quick Check-In</h3>
           <div className="">
-
-            <ActionButton name={name}/>
-            {/* <button className="bg-gray-100 p-4 rounded-lg flex flex-col items-center gap-2">
-              <FiPhoneCall className="text-xl" />
-              <span>Call</span>
-            </button>
-
-            <button className="bg-gray-100 p-4 rounded-lg flex flex-col items-center gap-2">
-              <MdTextsms className="text-xl" />
-              <span>Text</span>
-            </button>
-
-            <button className="bg-gray-100 p-4 rounded-lg flex flex-col items-center gap-2">
-              <LuVideo className="text-xl" />
-              <span>Video</span>
-            </button> */}
+            <ActionButton name={name} />
           </div>
         </div>
       </div>
