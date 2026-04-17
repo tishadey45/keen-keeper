@@ -6,6 +6,7 @@ import { MdTextsms } from "react-icons/md";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { PiArchiveBold } from "react-icons/pi";
 import { RiNotificationSnoozeLine } from "react-icons/ri";
+import ActionButton from "@/components/ActionButtons";
 
 export default async function DetailsPage({ params }) {
   // console.log(params);
@@ -102,8 +103,10 @@ export default async function DetailsPage({ params }) {
         </div>
         <div className="bg-gray-50 p-6 rounded-xl shadow-lg">
           <h3 className="mb-4 font-semibold">Quick Check-In</h3>
-          <div className="grid grid-cols-3 gap-4">
-            <button className="bg-gray-100 p-4 rounded-lg flex flex-col items-center gap-2">
+          <div className="">
+
+            <ActionButton name={name}/>
+            {/* <button className="bg-gray-100 p-4 rounded-lg flex flex-col items-center gap-2">
               <FiPhoneCall className="text-xl" />
               <span>Call</span>
             </button>
@@ -116,7 +119,7 @@ export default async function DetailsPage({ params }) {
             <button className="bg-gray-100 p-4 rounded-lg flex flex-col items-center gap-2">
               <LuVideo className="text-xl" />
               <span>Video</span>
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
