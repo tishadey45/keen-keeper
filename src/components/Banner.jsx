@@ -1,7 +1,7 @@
 const Banner = () => {
   return (
     <div>
-      <div className="hero bg-base-200 min-h-screen pb-80">
+      <div className="hero bg-base-200 min-h-screen ">
         <div className="hero-content text-center">
           <div className="">
             <h1 className="text-5xl font-bold">
